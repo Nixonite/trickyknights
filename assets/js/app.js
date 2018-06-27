@@ -20,4 +20,6 @@ import "./chessboard-0.3.0.js"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
-var board1 = ChessBoard('board1', 'start');
+function initBoard(){
+  var board1 = ChessBoard('board1', 'start');
+}
