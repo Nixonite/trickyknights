@@ -40,6 +40,7 @@ defmodule AppWeb do
       import AppWeb.Router.Helpers
       import AppWeb.ErrorHelpers
       import AppWeb.Gettext
+      import AppWeb.Helpers.Auth, only: [signed_in?: 1]
     end
   end
 
