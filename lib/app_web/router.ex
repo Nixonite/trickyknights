@@ -13,20 +13,25 @@ defmodule AppWeb.Router do
     plug :accepts, ["json"]
   end
 
+
+  pipeline :auth do
+    plug :browser
+    plug AppWeb.Helpers.CheckAuth
+  end
+
   scope "/", AppWeb do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-
+    get "/admin/sign-in", SessionController, :new
+    post "/admin/sign-in", SessionController, :create
   end
 
   scope "/admin", AppWeb do
-    pipe_through :browser
+    pipe_through :auth
 
     resources "/users", UserController, only: [:create, :new]
 
-    get "/sign-in", SessionController, :new
-    post "/sign-in", SessionController, :create
     delete "/sign-out", SessionController, :delete
   end
 
