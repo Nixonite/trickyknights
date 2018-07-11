@@ -1,0 +1,83 @@
+<h2>Show Game</h2>
+
+<ul>
+
+  <li>
+    <strong>White:</strong>
+    <%= @game.white %>
+  </li>
+
+  <li>
+    <strong>Black:</strong>
+    <%= @game.black %>
+  </li>
+
+  <li>
+    <strong>Whiteelo:</strong>
+    <%= @game.whiteelo %>
+  </li>
+
+  <li>
+    <strong>Blackelo:</strong>
+    <%= @game.blackelo %>
+  </li>
+
+  <li>
+    <strong>Pgn:</strong>
+    <%= @game.pgn %>
+  </li>
+
+  <li>
+    <strong>Result:</strong>
+    <%= @game.result %>
+  </li>
+
+  <li>
+    <strong>Site:</strong>
+    <%= @game.site %>
+  </li>
+
+  <li>
+    <strong>Event:</strong>
+    <%= @game.event %>
+  </li>
+
+  <li>
+    <strong>Round:</strong>
+    <%= @game.round %>
+  </li>
+
+  <li>
+    <strong>Date:</strong>
+    <%= @game.date %>
+  </li>
+
+  <li>
+    <strong>Variant:</strong>
+    <%= @game.variant %>
+  </li>
+
+  <li>
+    <strong>Timecontrol:</strong>
+    <%= @game.timecontrol %>
+  </li>
+
+  <li>
+    <strong>Eco:</strong>
+    <%= @game.eco %>
+  </li>
+
+  <li>
+    <strong>Opening:</strong>
+    <%= @game.opening %>
+  </li>
+
+  <li>
+    <strong>Annotator:</strong>
+    <%= @game.annotator %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: game_path(@conn, :edit, @game) %></span>
+<span><%= link "Back", to: game_path(@conn, :index) %></span>

@@ -1,0 +1,54 @@
+<h2>Listing Games</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>White</th>
+      <th>Black</th>
+      <th>Whiteelo</th>
+      <th>Blackelo</th>
+      <th>Pgn</th>
+      <th>Result</th>
+      <th>Site</th>
+      <th>Event</th>
+      <th>Round</th>
+      <th>Date</th>
+      <th>Variant</th>
+      <th>Timecontrol</th>
+      <th>Eco</th>
+      <th>Opening</th>
+      <th>Annotator</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for game <- @games do %>
+    <tr>
+      <td><%= game.white %></td>
+      <td><%= game.black %></td>
+      <td><%= game.whiteelo %></td>
+      <td><%= game.blackelo %></td>
+      <td><%= game.pgn %></td>
+      <td><%= game.result %></td>
+      <td><%= game.site %></td>
+      <td><%= game.event %></td>
+      <td><%= game.round %></td>
+      <td><%= game.date %></td>
+      <td><%= game.variant %></td>
+      <td><%= game.timecontrol %></td>
+      <td><%= game.eco %></td>
+      <td><%= game.opening %></td>
+      <td><%= game.annotator %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: game_path(@conn, :show, game), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: game_path(@conn, :edit, game), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: game_path(@conn, :delete, game), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Game", to: game_path(@conn, :new) %></span>
