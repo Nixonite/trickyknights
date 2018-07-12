@@ -15,7 +15,7 @@ defmodule AppWeb.SessionController do
         conn
         |> put_session(:current_user_id, user.id)
         |> put_flash(:info, "Signed in successfully.")
-        |> redirect(to: page_path(conn, :index))
+        |> redirect(to: admin_path(conn, :index))
       {:error, _} ->
         conn
         |> put_flash(:error, "There was a problem w/ your username/password")

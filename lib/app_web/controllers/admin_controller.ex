@@ -1,6 +1,8 @@
 defmodule AppWeb.AdminController do
   use AppWeb, :controller
 
+  plug :put_layout, "admin.html"
+
   def index(conn, _params) do
     render(conn, "admin.html")
   end

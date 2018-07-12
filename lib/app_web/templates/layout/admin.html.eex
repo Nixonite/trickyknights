@@ -18,15 +18,12 @@
     <div class="container">
       <header class="header">
         <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-
-            <%= if signed_in?(@conn) do %>
-              <li><%= link "Sign out", to: session_path(@conn, :delete), method: :delete %></li>
-              <li><%= link "Admin", to: admin_path(@conn, :index), method: :get %></li>
-            <% end %>
+          <ul class="nav nav-pills float-right">
+            <li><%= link "TrickyKnights", to: page_path(@conn, :index) %></li>
+            <li><%= link "Sign out", to: session_path(@conn, :delete), method: :delete %></li>
+            <li><%= link "Admin", to: admin_path(@conn, :index), method: :get %></li>
           </ul>
         </nav>
-        <h1><%= link "Tricky Knights", to: page_path(@conn, :index), method: :get %></h1>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

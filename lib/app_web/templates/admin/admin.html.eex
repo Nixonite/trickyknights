@@ -1,7 +1,20 @@
-<h1>Admin Page</h1>
-
-<%= form_tag("/admin/test", method: :post) %>
-<textarea rows="10" cols="50" name="game">
-</textarea>
-<input type="submit" value="Submit">
-</form>
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/images/pen.png" width="120px">
+      <div class="card-body">
+        <p class="card-text">Add, Update, or Delete blog posts.</p>
+        <a href="/admin" class="btn btn-primary">Posts</a>
+      </div>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/images/chess.png" width="120px">
+      <div class="card-body">
+        <p class="card-text">Add, Update, or Delete chess games.</p>
+        <a href="/admin" class="btn btn-primary">Games</a>
+      </div>
+    </div>
+  </div>
+</div>

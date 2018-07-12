@@ -1,1 +1,16 @@
 /* This file is for your main application css. */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 5px;
+  align-content: center;
+}
+.grid-item {
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  padding: 5px;
+}
