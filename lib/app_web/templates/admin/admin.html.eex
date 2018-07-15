@@ -4,7 +4,7 @@
       <img class="card-img-top" src="/images/pen.png" width="120px">
       <div class="card-body">
         <p class="card-text">Add, Update, or Delete blog posts.</p>
-        <a href="/admin" class="btn btn-primary">Posts</a>
+        <a href="/admin/posts" class="btn btn-primary">Posts</a>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
       <img class="card-img-top" src="/images/chess.png" width="120px">
       <div class="card-body">
         <p class="card-text">Add, Update, or Delete chess games.</p>
-        <a href="/admin" class="btn btn-primary">Games</a>
+        <a href="/admin/games" class="btn btn-primary">Games</a>
       </div>
     </div>
   </div>

@@ -4,6 +4,8 @@ defmodule AppWeb.GameController do
   alias App.Games
   alias App.Games.Game
 
+  plug :put_layout, "admin.html"
+
   def index(conn, _params) do
     games = Games.list_games()
     render(conn, "index.html", games: games)

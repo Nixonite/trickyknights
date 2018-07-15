@@ -4,6 +4,9 @@ defmodule AppWeb.PostController do
   alias App.Posts
   alias App.Posts.Post
 
+  plug :put_layout, "admin.html"
+
+
   def index(conn, _params) do
     posts = Posts.list_posts()
     render(conn, "index.html", posts: posts)

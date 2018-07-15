@@ -31,7 +31,8 @@ defmodule AppWeb.Router do
     pipe_through :auth
 
     get "/", AdminController, :index
-    post "/test", AdminController, :create
+    get "/new_game", AdminController, :new_game
+    post "/post_game", AdminController, :post_game
     resources "/users", UserController
     resources "/games", GameController
     resources "/posts", PostController

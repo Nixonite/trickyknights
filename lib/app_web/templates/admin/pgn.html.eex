@@ -1,7 +1,9 @@
 <h1>Admin Page</h1>
 
-<%= form_tag("/admin/test", method: :post) %>
-<textarea rows="10" cols="50" name="game">
-</textarea>
-<input type="submit" value="Submit">
-</form>
+<%= form_tag("/admin/post_game", method: :post) %>
+<div class="form-group">
+  <label for="game">Game PGN Here</label>
+
+  <textarea class="form-control" rows="8" id="game" name="game"></textarea>
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>

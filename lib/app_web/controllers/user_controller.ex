@@ -4,6 +4,9 @@ defmodule AppWeb.UserController do
   alias App.Accounts
   alias App.Accounts.User
 
+  plug :put_layout, "admin.html"
+
+
   def new(conn, _params) do
     changeset = Accounts.change_user(%User{})
     render(conn, "new.html", changeset: changeset)

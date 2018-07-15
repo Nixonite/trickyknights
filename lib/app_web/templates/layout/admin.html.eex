@@ -19,7 +19,7 @@
       <header class="header">
         <nav role="navigation">
           <ul class="nav nav-pills float-right">
-            <li><%= link "TrickyKnights", to: page_path(@conn, :index) %></li>
+            <li><%= link "Visit Site", to: page_path(@conn, :index) %></li>
             <li><%= link "Sign out", to: session_path(@conn, :delete), method: :delete %></li>
             <li><%= link "Admin", to: admin_path(@conn, :index), method: :get %></li>
           </ul>
